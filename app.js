@@ -27,14 +27,12 @@ function listaVisual() {
 
 //funcion del boton para realizar el sorteo
 function sortearAmigo() {
-    let nombreElegido = '';
-    let resultado = document.getElementById("resultado");
     if (amigosElegidos.length <= 1) {
         alert("Debe ingresar al menos 2 nombres para realizar el sorteo");
     } else {
         let num = Math.floor(Math.random()*amigosElegidos.length);
-        nombreElegido = amigosElegidos[num];
-        resultado = document.getElementById("resultado");
+        let nombreElegido = amigosElegidos[num];
+        let resultado = document.getElementById("resultado");
         resultado.innerHTML = `Su amigo secreto es: ${nombreElegido}`;
        
         }
